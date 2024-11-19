@@ -1,0 +1,110 @@
+import 'package:flo/constants/colors.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class Button extends StatelessWidget {
+  final String text;
+  final Color? color;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  const Button({super.key,
+    required this.text,
+    this.color,
+    this.fontSize,
+    this.fontWeight,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 55..h,
+      decoration: BoxDecoration(
+        color: AppColor.primaryColor,
+        borderRadius: BorderRadius.circular(15..r),
+      ),
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            color: color?? AppColor.white,
+            fontSize: fontSize?? 18..sp,
+            fontWeight: fontWeight?? FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CircleButton extends StatelessWidget {
+  final String text;
+  final Color? color;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  const CircleButton({super.key,
+    required this.text,
+    this.color,
+    this.fontSize,
+    this.fontWeight,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 50..h,
+      decoration: BoxDecoration(
+        color: AppColor.primaryColor,
+        borderRadius: BorderRadius.circular(50..r),
+      ),
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            color: color?? AppColor.white,
+            fontSize: fontSize?? 18..sp,
+            fontWeight: fontWeight?? FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class QuestionButton extends StatelessWidget {
+  final String text;
+  final Color? color;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  const QuestionButton({super.key,
+    required this.text,
+    this.color,
+    this.fontSize,
+    this.fontWeight,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width*.4,
+      height: 50..h,
+      decoration: BoxDecoration(
+        color: AppColor.primaryColor,
+        borderRadius: BorderRadius.circular(50..r),
+      ),
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            color: color?? AppColor.white,
+            fontSize: fontSize?? 18..sp,
+            fontWeight: fontWeight?? FontWeight.w700,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
