@@ -235,7 +235,10 @@ class _PartnerState extends State<Partner> {
                             child: Container(
                               width: 230..w,
                               decoration: BoxDecoration(
-                                color: AppColor.white,
+                                border: Border.all(
+                                  color: Colors.white,
+                                ),
+                                color: Theme.of(context).hintColor,
                                 borderRadius: BorderRadius.circular(10..r),
                               ),
                               child: Column(
@@ -257,12 +260,13 @@ class _PartnerState extends State<Partner> {
                                           fontSize: 16,
                                           text: 'Your pregnancy day',
                                           fontWeight: FontWeight.w600,
+                                          color: Theme.of(context).primaryColor,
                                         ),
                                         SizedBox(height: 5..h,),
                                         Text(
                                           'A view-only version of your current pregnancy day and predictions.',
                                           style: TextStyle(
-                                              color: AppColor.black,
+                                              color: Theme.of(context).primaryColor,
                                               fontSize: 14..sp,
                                               fontWeight: FontWeight.w400
                                           ),
@@ -329,7 +333,10 @@ class _PartnerState extends State<Partner> {
                           width: MediaQuery.of(context).size.width,
                           padding: EdgeInsets.symmetric(vertical: 15),
                           decoration: BoxDecoration(
-                            color: AppColor.white,
+                            color: Theme.of(context).hintColor,
+                            border: Border.all(
+                              color: Colors.white,
+                            ),
                             borderRadius: BorderRadius.circular(15..r),
                           ),
                           child: Column(
@@ -339,6 +346,7 @@ class _PartnerState extends State<Partner> {
                                 padding: const EdgeInsets.symmetric(horizontal: 15),
                                 child: Text14(
                                   fontSize: 16,
+                                  color: Theme.of(context).primaryColor,
                                   text: 'Your question answered',
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -354,7 +362,7 @@ class _PartnerState extends State<Partner> {
                                   decoration: BoxDecoration(
                                       border: Border(
                                           bottom: BorderSide(
-                                            color: AppColor.black.withOpacity(.25),
+                                            color: Theme.of(context).focusColor,
                                             width: .2,
                                           )
                                       )
@@ -372,13 +380,13 @@ class _PartnerState extends State<Partner> {
                                               child: Text(
                                                 'What is Flo for partners?',
                                                 style: TextStyle(
-                                                    color: AppColor.black,
+                                                    color: Theme.of(context).primaryColor,
                                                     fontSize: 14..sp,
                                                     fontWeight: FontWeight.w400
                                                 ),
                                               ),
                                             ),
-                                            Icon(Icons.keyboard_arrow_down,color: AppColor.black.withOpacity(.5)),
+                                            Icon(Icons.keyboard_arrow_down,color: Theme.of(context).cardColor,),
 
                                           ],
                                         ),
@@ -390,7 +398,7 @@ class _PartnerState extends State<Partner> {
                                                 Text(
                                                   'Flo for Partners is a feature available to all user of your mobile app. You can share your Flo experience with your partner whether you\'re pregnent, trying to conceive or trying to conceive, or tracking your periods.',
                                                   style: TextStyle(
-                                                      color: AppColor.black.withOpacity(.5),
+                                                      color: Theme.of(context).cardColor,
                                                       fontSize: 14..sp,
                                                       fontWeight: FontWeight.w400
                                                   ),
@@ -414,7 +422,7 @@ class _PartnerState extends State<Partner> {
                                   decoration: BoxDecoration(
                                       border: Border(
                                           bottom: BorderSide(
-                                            color: AppColor.black.withOpacity(.25),
+                                            color: Theme.of(context).focusColor,
                                             width: .2,
                                           )
                                       )
@@ -432,13 +440,13 @@ class _PartnerState extends State<Partner> {
                                               child: Text(
                                                 'What is Flo for partners?',
                                                 style: TextStyle(
-                                                    color: AppColor.black,
+                                                    color: Theme.of(context).primaryColor,
                                                     fontSize: 14..sp,
                                                     fontWeight: FontWeight.w400
                                                 ),
                                               ),
                                             ),
-                                            Icon(Icons.keyboard_arrow_down,color: AppColor.black.withOpacity(.5)),
+                                            Icon(Icons.keyboard_arrow_down,color: Theme.of(context).cardColor,),
 
                                           ],
                                         ),
@@ -450,7 +458,7 @@ class _PartnerState extends State<Partner> {
                                                 Text(
                                                   'Flo for Partners is a feature available to all user of your mobile app. You can share your Flo experience with your partner whether you\'re pregnent, trying to conceive or trying to conceive, or tracking your periods.',
                                                   style: TextStyle(
-                                                      color: AppColor.black.withOpacity(.5),
+                                                      color: Theme.of(context).cardColor,
                                                       fontSize: 14..sp,
                                                       fontWeight: FontWeight.w400
                                                   ),
@@ -474,7 +482,7 @@ class _PartnerState extends State<Partner> {
                                   decoration: BoxDecoration(
                                       border: Border(
                                           bottom: BorderSide(
-                                            color: AppColor.black.withOpacity(.25),
+                                            color: Theme.of(context).focusColor,
                                             width: .2,
                                           )
                                       )
@@ -492,13 +500,13 @@ class _PartnerState extends State<Partner> {
                                               child: Text(
                                                 'Can all couples Flo  for Partners',
                                                 style: TextStyle(
-                                                    color: AppColor.black,
+                                                    color: Theme.of(context).primaryColor,
                                                     fontSize: 14..sp,
                                                     fontWeight: FontWeight.w400
                                                 ),
                                               ),
                                             ),
-                                            Icon(Icons.keyboard_arrow_down,color: AppColor.black.withOpacity(.5)),
+                                            Icon(Icons.keyboard_arrow_down,color: Theme.of(context).cardColor,),
 
                                           ],
                                         ),
@@ -512,7 +520,7 @@ class _PartnerState extends State<Partner> {
                                                       'is currently only able to track one menstrual cycle at a time. However, we\'re '
                                                       'continually working to make Flo for Partners more inclusive so we can better serve all coupples.',
                                                   style: TextStyle(
-                                                      color: AppColor.black.withOpacity(.5),
+                                                      color: Theme.of(context).cardColor,
                                                       fontSize: 14..sp,
                                                       fontWeight: FontWeight.w400
                                                   ),
@@ -536,7 +544,7 @@ class _PartnerState extends State<Partner> {
                                   decoration: BoxDecoration(
                                       border: Border(
                                           bottom: BorderSide(
-                                            color: AppColor.black.withOpacity(.25),
+                                            color: Theme.of(context).focusColor,
                                             width: .2,
                                           )
                                       )
@@ -554,13 +562,13 @@ class _PartnerState extends State<Partner> {
                                               child: Text(
                                                 'Can I use Flo Partners with Anonymous Mode?',
                                                 style: TextStyle(
-                                                    color: AppColor.black,
+                                                    color: Theme.of(context).primaryColor,
                                                     fontSize: 14..sp,
                                                     fontWeight: FontWeight.w400
                                                 ),
                                               ),
                                             ),
-                                            Icon(Icons.keyboard_arrow_down,color: AppColor.black.withOpacity(.5)),
+                                            Icon(Icons.keyboard_arrow_down,color: Theme.of(context).cardColor,),
 
                                           ],
                                         ),
@@ -572,7 +580,7 @@ class _PartnerState extends State<Partner> {
                                                 Text(
                                                   'No, you can\'t use to Flo to Partners and Anonymous Mode at the same time. If you have any further questions, please contact the customer support time.',
                                                   style: TextStyle(
-                                                      color: AppColor.black.withOpacity(.5),
+                                                      color: Theme.of(context).cardColor,
                                                       fontSize: 14..sp,
                                                       fontWeight: FontWeight.w400
                                                   ),
@@ -596,7 +604,7 @@ class _PartnerState extends State<Partner> {
                                   decoration: BoxDecoration(
                                       border: Border(
                                           bottom: BorderSide(
-                                            color: Colors.transparent,
+                                            color: Theme.of(context).focusColor,
                                             width: .2,
                                           )
                                       )
@@ -614,13 +622,13 @@ class _PartnerState extends State<Partner> {
                                               child: Text(
                                                 'What do I need to know about couples quizzes?',
                                                 style: TextStyle(
-                                                    color: AppColor.black,
+                                                    color: Theme.of(context).primaryColor,
                                                     fontSize: 14..sp,
                                                     fontWeight: FontWeight.w400
                                                 ),
                                               ),
                                             ),
-                                            Icon(Icons.keyboard_arrow_down,color: AppColor.black.withOpacity(.5)),
+                                            Icon(Icons.keyboard_arrow_down,color: Theme.of(context).cardColor,),
 
                                           ],
                                         ),
@@ -632,7 +640,7 @@ class _PartnerState extends State<Partner> {
                                                 Text(
                                                   'These are quizzes that you and your partner answer separately. Then when you ha\'ve both completed the quiz, you can see each other\'s answer side by side. Just so you\'re aware you answers will always be visible to your partner, regardless of who answer first or if only one of you respond.',
                                                   style: TextStyle(
-                                                      color: AppColor.black.withOpacity(.5),
+                                                      color: Theme.of(context).cardColor,
                                                       fontSize: 14..sp,
                                                       fontWeight: FontWeight.w400
                                                   ),
@@ -653,7 +661,10 @@ class _PartnerState extends State<Partner> {
                           width: MediaQuery.of(context).size.width,
                           padding: EdgeInsets.symmetric(horizontal:20,vertical: 20),
                           decoration: BoxDecoration(
-                            color: AppColor.white,
+                            color: Theme.of(context).hintColor,
+                            border: Border.all(
+                              color: Colors.white,
+                            ),
                             borderRadius: BorderRadius.circular(15..r),
                           ),
                           child: Column(
@@ -663,6 +674,7 @@ class _PartnerState extends State<Partner> {
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 text: 'Here\'s how to invite your partner:',
+                                color: Theme.of(context).primaryColor,
                               ),
                               SizedBox(height: 10..w,),
                               Row(
@@ -675,7 +687,7 @@ class _PartnerState extends State<Partner> {
                                       shape: BoxShape.circle,
                                     ),
                                     child: Center(
-                                      child: Icon(Icons.insert_invitation_outlined,size:30),
+                                      child: Icon(Icons.insert_invitation_outlined,size:30,color: AppColor.black,),
                                     ),
                                   ),
                                   SizedBox(width: 15..w),
@@ -687,11 +699,12 @@ class _PartnerState extends State<Partner> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.w600,
                                           text: '1. INVITE',
+                                          color: Theme.of(context).primaryColor,
                                         ),
                                         Text(
                                           'You need to invite your partner to Flo and generate a pairing code.',
                                           style: TextStyle(
-                                              color: AppColor.black,
+                                              color: Theme.of(context).primaryColor,
                                               fontSize: 12..sp,
                                               fontWeight: FontWeight.w400
                                           ),
@@ -712,7 +725,7 @@ class _PartnerState extends State<Partner> {
                                       shape: BoxShape.circle,
                                     ),
                                     child: Center(
-                                      child: Icon(Icons.qr_code_scanner_outlined,size:30),
+                                      child: Icon(Icons.qr_code_scanner_outlined,size:30,color: AppColor.black,),
                                     ),
                                   ),
                                   SizedBox(width: 15..w),
@@ -724,11 +737,12 @@ class _PartnerState extends State<Partner> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.w600,
                                           text: '2. PAIR',
+                                          color: Theme.of(context).primaryColor,
                                         ),
                                         Text(
                                           'Your partner will download the Flo app and then use the code to pair your profiles.',
                                           style: TextStyle(
-                                              color: AppColor.black,
+                                              color: Theme.of(context).primaryColor,
                                               fontSize: 12..sp,
                                               fontWeight: FontWeight.w400
                                           ),
@@ -749,7 +763,7 @@ class _PartnerState extends State<Partner> {
                                       shape: BoxShape.circle,
                                     ),
                                     child: Center(
-                                      child: Icon(Icons.share_outlined,size:30),
+                                      child: Icon(Icons.share_outlined,size:30,color: AppColor.black,),
                                     ),
                                   ),
                                   SizedBox(width: 15..w),
@@ -761,11 +775,12 @@ class _PartnerState extends State<Partner> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.w600,
                                           text: '3. SHARE',
+                                          color: Theme.of(context).primaryColor,
                                         ),
                                         Text(
                                           'Once the invite and pairing is done, you\'ll be sharing Flo with your partner.',
                                           style: TextStyle(
-                                              color: AppColor.black,
+                                              color: Theme.of(context).primaryColor,
                                               fontSize: 12..sp,
                                               fontWeight: FontWeight.w400
                                           ),

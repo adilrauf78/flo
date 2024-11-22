@@ -124,7 +124,10 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                     Container(
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
-                        color: AppColor.white,
+                        color: Theme.of(context).hintColor,
+                        border: Border.all(
+                          color: Colors.white,
+                        ),
                         borderRadius: BorderRadius.circular(10..r),
                       ),
                       child: Column(
@@ -133,7 +136,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                             padding: EdgeInsets.only(left: 15,),
                             child: Row(
                               children: [
-                                Icon(Iconsax.shield_tick ,color: AppColor.black,size: 28),
+                                Icon(Iconsax.shield_tick ,color: Theme.of(context).primaryColor,size: 28),
                                 SizedBox(width: 15..w),
                                 Expanded(
                                   child: Container(
@@ -142,7 +145,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                         color: Colors.transparent,
                                         border: Border(
                                             bottom: BorderSide(
-                                              color: AppColor.black.withOpacity(.25),
+                                              color: Theme.of(context).focusColor,
                                               width: .2,
                                             )
                                         )
@@ -156,13 +159,14 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                             children: [
                                               SubText(
                                                 text: 'Flo privacy explained',
+                                                color: Theme.of(context).primaryColor,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                               SizedBox(height: 5..h),
                                               Text(
                                                 'Find out how Flo keeps your data safe',
                                                 style: TextStyle(
-                                                    color: AppColor.black.withOpacity(.5),
+                                                    color: Theme.of(context).cardColor,
                                                     fontSize: 14..sp,
                                                     fontWeight: FontWeight.w400
                                                 ),
@@ -171,7 +175,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                           ),
                                         ),
                                         SizedBox(width: 20..w),
-                                        Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                        Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                       ],
                                     ),
                                   ),
@@ -183,7 +187,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                             padding: EdgeInsets.only(left: 15,),
                             child: Row(
                               children: [
-                                Icon(Iconsax.info_circle ,color: AppColor.black,size: 28),
+                                Icon(Iconsax.info_circle ,color: Theme.of(context).primaryColor,size: 28),
                                 SizedBox(width: 15..w),
                                 Expanded(
                                   child: Container(
@@ -192,7 +196,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                         color: Colors.transparent,
                                         border: Border(
                                             bottom: BorderSide(
-                                              color: AppColor.black.withOpacity(.25),
+                                              color: Theme.of(context).focusColor,
                                               width: .2,
                                             )
                                         )
@@ -207,12 +211,13 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                               SubText(
                                                 text: 'Request information',
                                                 fontWeight: FontWeight.w500,
+                                                color: Theme.of(context).primaryColor,
                                               ),
                                               SizedBox(height: 5..h),
                                               Text(
                                                 'Find out what cycle and health-related data we hold about you.',
                                                 style: TextStyle(
-                                                    color: AppColor.black.withOpacity(.5),
+                                                    color: Theme.of(context).cardColor,
                                                     fontSize: 14..sp,
                                                     fontWeight: FontWeight.w400
                                                 ),
@@ -221,7 +226,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                           ),
                                         ),
                                         SizedBox(width: 20..w),
-                                        Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                        Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                       ],
                                     ),
                                   ),
@@ -233,7 +238,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                             padding: EdgeInsets.only(left: 15,),
                             child: Row(
                               children: [
-                                Icon(Iconsax.user,color: AppColor.black,size: 28),
+                                Icon(Iconsax.user,color: Theme.of(context).primaryColor,size: 28),
                                 SizedBox(width: 15..w),
                                 Expanded(
                                   child: Container(
@@ -242,7 +247,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                         color: Colors.transparent,
                                         border: Border(
                                             bottom: BorderSide(
-                                              color: AppColor.black.withOpacity(.25),
+                                              color: Theme.of(context).focusColor,
                                               width: .2,
                                             )
                                         )
@@ -256,13 +261,14 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                             children: [
                                               SubText(
                                                 text: 'Change account details',
+                                                color: Theme.of(context).primaryColor,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                               SizedBox(height: 5..h),
                                               Text(
                                                 'Ask us to update your personal details, such as your name or email address.',
                                                 style: TextStyle(
-                                                  color: AppColor.black.withOpacity(.5),
+                                                  color: Theme.of(context).cardColor,
                                                   fontSize: 14..sp,
                                                   fontWeight: FontWeight.w400,
                                                 ),
@@ -271,7 +277,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                           ),
                                         ),
                                         SizedBox(width: 20..w),
-                                        Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                        Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                       ],
                                     ),
                                   ),
@@ -285,7 +291,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                               padding: EdgeInsets.only(left: 15,),
                               child: Row(
                                 children: [
-                                  Icon(Iconsax.card_tick ,color: AppColor.black,size: 28),
+                                  Icon(Iconsax.card_tick ,color: Theme.of(context).primaryColor,size: 28),
                                   SizedBox(width: 15..w),
                                   Expanded(
                                     child: Container(
@@ -294,7 +300,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                           color: Colors.transparent,
                                           border: Border(
                                               bottom: BorderSide(
-                                                color: AppColor.black.withOpacity(.25),
+                                                color: Theme.of(context).focusColor,
                                                 width: .2,
                                               )
                                           )
@@ -308,13 +314,14 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                               children: [
                                                 SubText(
                                                   text: 'Manage your consents',
+                                                  color: Theme.of(context).primaryColor,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                                 SizedBox(height: 5..h),
                                                 Text(
                                                   'Choose and control your privacy option.',
                                                   style: TextStyle(
-                                                      color: AppColor.black.withOpacity(.5),
+                                                      color: Theme.of(context).cardColor,
                                                       fontSize: 14..sp,
                                                       fontWeight: FontWeight.w400
                                                   ),
@@ -323,7 +330,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                             ),
                                           ),
                                           SizedBox(width: 20..w),
-                                          Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                          Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                         ],
                                       ),
                                     ),
@@ -342,7 +349,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                               padding: EdgeInsets.only(left: 15,),
                               child: Row(
                                 children: [
-                                  Icon(Iconsax.trash ,color: AppColor.black,size: 28),
+                                  Icon(Iconsax.trash ,color: Theme.of(context).primaryColor,size: 28),
                                   SizedBox(width: 15..w),
                                   Expanded(
                                     child: Container(
@@ -351,7 +358,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                           color: Colors.transparent,
                                           border: Border(
                                               bottom: BorderSide(
-                                                color: Colors.transparent,
+                                                color: Theme.of(context).primaryColor,
                                               )
                                           )
                                       ),
@@ -365,12 +372,13 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                                 SubText(
                                                   text: 'Delete my account',
                                                   fontWeight: FontWeight.w500,
+                                                  color: Theme.of(context).primaryColor,
                                                 ),
                                                 SizedBox(height: 5..h),
                                                 Text(
                                                   'Permanently delete your account and any data associated with it, including cycle and health-related data.',
                                                   style: TextStyle(
-                                                      color: AppColor.black.withOpacity(.5),
+                                                      color: Theme.of(context).cardColor,
                                                       fontSize: 14..sp,
                                                       fontWeight: FontWeight.w400
                                                   ),
@@ -379,7 +387,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                                             ),
                                           ),
                                           SizedBox(width: 20..w),
-                                          Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                          Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                         ],
                                       ),
                                     ),
@@ -396,7 +404,10 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.symmetric(horizontal: 20,vertical:20),
                       decoration: BoxDecoration(
-                        color: AppColor.white,
+                        border: Border.all(
+                          color: Colors.white
+                        ),
+                        color: Theme.of(context).hintColor,
                         borderRadius: BorderRadius.circular(10..r),
                       ),
                       child: Column(
@@ -407,7 +418,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                               child: Image.asset('${imagePath}protect.png')),
                           SubText(
                             text: 'Your data is protected',
-                            color: AppColor.black,
+                            color: Theme.of(context).primaryColor,
                             fontSize: 20..sp,
                             fontWeight: FontWeight.w500,
                           ),
@@ -417,7 +428,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                             'Your privacy is our top priority.We\'ll never sell your data and you can delete it at anytime',
                             style: TextStyle(
                               fontWeight: FontWeight.w400,
-                              color: AppColor.black.withOpacity(.4),
+                              color: Theme.of(context).cardColor,
                               fontSize: 14..sp,
                             ),
                           ),
@@ -426,14 +437,14 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                             width: MediaQuery.of(context).size.width*.3,
                             height: 35..h,
                             decoration: BoxDecoration(
-                              color: AppColor.black.withOpacity(.1),
+                              color: Theme.of(context).shadowColor,
                               borderRadius: BorderRadius.circular(50),
                             ),
                             child: Center(
                               child: Text(
                                 'Learn more',
                                 style: TextStyle(
-                                  color: AppColor.black,
+                                  color: Theme.of(context).primaryColor,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 14..sp,
                                 ),
@@ -448,7 +459,10 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
-                        color: AppColor.white,
+                        color: Theme.of(context).hintColor,
+                        border: Border.all(
+                          color: Colors.white
+                        ),
                         borderRadius: BorderRadius.circular(10..r),
                       ),
                       child: Column(
@@ -456,12 +470,13 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                         children: [
                           SubText(
                             text: 'User ID',
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w500,
                           ),
                           Text(
                             'Tap to copy',
                             style: TextStyle(
-                                color: AppColor.black.withOpacity(.5),
+                                color: Theme.of(context).cardColor,
                                 fontSize: 14..sp,
                                 fontWeight: FontWeight.w400
                             ),
@@ -470,7 +485,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
                           Text(
                             'ca8wuf-afsjfo8-sdklfj',
                             style: TextStyle(
-                                color: AppColor.black.withOpacity(.5),
+                                color: Theme.of(context).cardColor,
                                 fontSize: 16..sp,
                                 fontWeight: FontWeight.w400
                             ),

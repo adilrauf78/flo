@@ -97,10 +97,10 @@ class _SecretChatState extends State<SecretChat> {
                                 filled: true,
                                 hintText: 'Search',
                                 hintStyle: TextStyle(
-                                  color: AppColor.black,
+                                  color: Theme.of(context).primaryColor,
                                 ),
                                 fillColor: Theme.of(context).shadowColor,
-                                prefixIcon: Icon(Iconsax.search_normal, color: AppColor.black),
+                                prefixIcon: Icon(Iconsax.search_normal, color: Theme.of(context).primaryColor,),
                             ),
                           ),
                         ),
@@ -137,7 +137,7 @@ class _SecretChatState extends State<SecretChat> {
                             child: Center(
                               child: SubText(
                                 text: items[index]['text'],
-                                color: currentIndex ==index? AppColor.white : AppColor.black,
+                                color: currentIndex ==index? AppColor.white :  Theme.of(context).primaryColor,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),

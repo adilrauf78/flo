@@ -60,13 +60,16 @@ class _AnonymousModeState extends State<AnonymousMode> {
                   width: double.infinity,
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: AppColor.white,
+                    color: Theme.of(context).hintColor,
+                    border: Border.all(
+                      color: Colors.white,
+                    ),
                     borderRadius: BorderRadius.circular(15..r),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(Iconsax.card_tick ,color: AppColor.black,size: 24),
+                      Icon(Iconsax.card_tick ,color: Theme.of(context).primaryColor,size: 24),
                       SizedBox(width: 15..w),
                       Expanded(
                         child: Column(
@@ -75,7 +78,7 @@ class _AnonymousModeState extends State<AnonymousMode> {
                             Text(
                              'We won\'t store your email, name or technical identifiers',
                               style: TextStyle(
-                                  color: AppColor.black,
+                                  color: Theme.of(context).primaryColor,
                                   fontSize: 16..sp,
                                   fontWeight: FontWeight.w400
                               ),
@@ -83,7 +86,7 @@ class _AnonymousModeState extends State<AnonymousMode> {
                             Text(
                               'We\'ll transfer only essential data, like cycles and symptoms,to your new Anonymous Mode account.',
                               style: TextStyle(
-                                color: AppColor.black,
+                                color: Theme.of(context).primaryColor,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14..sp,
                               ),

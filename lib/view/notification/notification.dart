@@ -18,7 +18,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.backgroundColor,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -32,12 +32,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   children: [
                     InkWell(
                         onTap: () => navigateBackWithAnimation(context),
-                        child: Icon(Icons.arrow_back_outlined,size: 24, color: Colors.black)),
+                        child: Icon(Icons.arrow_back_outlined,size: 24, color: Theme.of(context).primaryColor,)),
                     SizedBox(width: 50,),
                     Text(
                       'Notifications',
                       style: TextStyle(
-                        color: AppColor.black,
+                        color: Theme.of(context).primaryColor,
                         fontWeight: FontWeight.w500,
                         fontSize: 18..sp,
                       ),
@@ -46,14 +46,14 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 ),
                 InkWell(
                     onTap: () => navigateToNextScreen(context, Reminders()),
-                    child: Icon(Iconsax.setting_2,color: AppColor.black,)),
+                    child: Icon(Iconsax.setting_2,color: Theme.of(context).primaryColor,)),
               ],
             ),
           ),
           SizedBox(height: 10..h),
           Divider(
             height: 1,
-            color: AppColor.black.withOpacity(.25),
+            color: Theme.of(context).focusColor,
           ),
           Expanded(
             child: SingleChildScrollView(
@@ -65,6 +65,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Text14(
                       text: 'Earlier',
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   SizedBox(height: 5..h),
@@ -102,7 +103,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                       Text(
                                         'Introduction Secret Chats Rules',
                                         style: TextStyle(
-                                          color: AppColor.black,
+                                            color: Theme.of(context).primaryColor,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 18..sp,
                                           overflow: TextOverflow.ellipsis
@@ -112,7 +113,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                         'Several guidelines to keep things safe and fun for everyone',
                                         maxLines: 4,
                                         style: TextStyle(
-                                            color: AppColor.black,
+                                            color: Theme.of(context).primaryColor,
                                             fontWeight: FontWeight.w400,
                                             fontSize: 18..sp,
                                             overflow: TextOverflow.ellipsis

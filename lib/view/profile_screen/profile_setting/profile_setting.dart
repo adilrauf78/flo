@@ -143,7 +143,10 @@ class _ProfileSettingState extends State<ProfileSetting> {
                     width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.only(left: 15),
                     decoration: BoxDecoration(
-                      color: AppColor.white,
+                      color: Theme.of(context).hintColor,
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
                       borderRadius: BorderRadius.circular(10..r),
                     ),
                     child: Column(
@@ -156,7 +159,7 @@ class _ProfileSettingState extends State<ProfileSetting> {
                                 color: Colors.transparent,
                                 border: Border(
                                     bottom: BorderSide(
-                                      color: AppColor.black.withOpacity(.25),
+                                      color: Theme.of(context).focusColor,
                                       width: .2,
                                     )
                                 )
@@ -166,6 +169,7 @@ class _ProfileSettingState extends State<ProfileSetting> {
                               children: [
                                 SubText(
                                   text: 'Anonymous Mode',
+                                  color: Theme.of(context).primaryColor,
                                   fontWeight: FontWeight.w400,
                                 ),
                                 Row(
@@ -173,10 +177,10 @@ class _ProfileSettingState extends State<ProfileSetting> {
                                     SubText(
                                       text: 'Off',
                                       fontWeight: FontWeight.w400,
-                                      color: AppColor.black.withOpacity(.5),
+                                      color: Theme.of(context).cardColor,
                                     ),
                                     SizedBox(width: 5,),
-                                    Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),),
+                                    Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,),
                                   ],
                                 )
                               ],
@@ -189,8 +193,11 @@ class _ProfileSettingState extends State<ProfileSetting> {
                             padding: EdgeInsets.only(right: 10,bottom: 15,top: 15),
                             decoration: BoxDecoration(
                                 color: Colors.transparent,
-                                border: Border.all(
-                                  color: Colors.transparent
+                                border: Border(
+                                    bottom: BorderSide(
+                                      color: Theme.of(context).focusColor,
+                                      width: .2,
+                                    )
                                 )
                             ),
                             child: Row(
@@ -198,9 +205,10 @@ class _ProfileSettingState extends State<ProfileSetting> {
                               children: [
                                 SubText(
                                   text: 'Lifecycle settings',
+                                  color: Theme.of(context).primaryColor,
                                   fontWeight: FontWeight.w400,
                                 ),
-                                Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                               ],
                             ),
                           ),

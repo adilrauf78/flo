@@ -377,7 +377,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               child: Center(
                                 child: SubText(
                                   text: items[index]['text'],
-                                  color: currentIndex ==index? AppColor.white : AppColor.black,
+                                  color: currentIndex ==index? AppColor.white : Theme.of(context).primaryColor,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -393,7 +393,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
-                        color: AppColor.white,
+                        color: Theme.of(context).hintColor,
+                        border: Border.all(
+                          color: Colors.white,
+                        ),
                         borderRadius: BorderRadius.circular(10..r),
                       ),
                       child: Column(
@@ -404,7 +407,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               padding: EdgeInsets.only(left: 15,),
                               child: Row(
                                 children: [
-                                  Icon(Icons.lock_outline,color: AppColor.black,),
+                                  Icon(Icons.lock_outline,color: Theme.of(context).primaryColor,),
                                   SizedBox(width: 15..w),
                                   Expanded(
                                     child: Container(
@@ -413,19 +416,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           color: Colors.transparent,
                                           border: Border(
                                               bottom: BorderSide(
-                                                color: AppColor.black.withOpacity(.25),
+                                                color: Theme.of(context).focusColor,
                                                 width: .2,
-                                              )
+                                              ),
                                           )
                                       ),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           SubText(
+                                            color: Theme.of(context).primaryColor,
                                             text: 'App Lock',
                                             fontWeight: FontWeight.w400,
                                           ),
-                                          Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                          Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                         ],
                                       ),
                                     ),
@@ -438,7 +442,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             padding: EdgeInsets.only(left: 15,),
                             child: Row(
                               children: [
-                                Icon(Iconsax.diagram,color: AppColor.black,),
+                                Icon(Iconsax.diagram,color: Theme.of(context).primaryColor,),
                                 SizedBox(width: 15..w),
                                 Expanded(
                                   child: Container(
@@ -447,7 +451,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         color: Colors.transparent,
                                         border: Border(
                                             bottom: BorderSide(
-                                              color: AppColor.black.withOpacity(.25),
+                                              color: Theme.of(context).focusColor,
                                               width: .2,
                                             )
                                         )
@@ -457,9 +461,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       children: [
                                         SubText(
                                           text: 'Graph & reports',
+                                          color: Theme.of(context).primaryColor,
                                           fontWeight: FontWeight.w400,
                                         ),
-                                        Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                        Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                       ],
                                     ),
                                   ),
@@ -473,7 +478,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               padding: EdgeInsets.only(left: 15,),
                               child: Row(
                                 children: [
-                                  Icon(Icons.sync,color: AppColor.black,),
+                                  Icon(Icons.sync,color: Theme.of(context).primaryColor,),
                                   SizedBox(width: 15..w),
                                   Expanded(
                                     child: Container(
@@ -482,7 +487,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           color: Colors.transparent,
                                           border: Border(
                                               bottom: BorderSide(
-                                                color: AppColor.black.withOpacity(.25),
+                                                color: Theme.of(context).focusColor,
                                                 width: .2,
                                               )
                                           )
@@ -493,8 +498,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           SubText(
                                             text: 'Cycle and ovulation ',
                                             fontWeight: FontWeight.w400,
+                                            color: Theme.of(context).primaryColor,
                                           ),
-                                          Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                          Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                         ],
                                       ),
                                     ),
@@ -509,7 +515,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               padding: EdgeInsets.only(left: 15,),
                               child: Row(
                                 children: [
-                                  Icon(Iconsax.setting_2,color: AppColor.black,),
+                                  Icon(Iconsax.setting_2,color: Theme.of(context).primaryColor,),
                                   SizedBox(width: 15..w),
                                   Expanded(
                                     child: Container(
@@ -518,7 +524,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           color: Colors.transparent,
                                           border: Border(
                                               bottom: BorderSide(
-                                                color: AppColor.black.withOpacity(.25),
+                                                color: Theme.of(context).focusColor,
                                                 width: .2,
                                               )
                                           )
@@ -528,9 +534,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         children: [
                                           SubText(
                                             text: 'App settings',
+                                            color: Theme.of(context).primaryColor,
                                             fontWeight: FontWeight.w400,
                                           ),
-                                          Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                          Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                         ],
                                       ),
                                     ),
@@ -545,7 +552,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               padding: EdgeInsets.only(left: 15,),
                               child: Row(
                                 children: [
-                                  Icon(Iconsax.user_octagon,color: AppColor.black,),
+                                  Icon(Iconsax.user_octagon,color: Theme.of(context).primaryColor,),
                                   SizedBox(width: 15..w),
                                   Expanded(
                                     child: Container(
@@ -554,7 +561,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           color: Colors.transparent,
                                           border: Border(
                                               bottom: BorderSide(
-                                                color: AppColor.black.withOpacity(.25),
+                                                color: Theme.of(context).focusColor,
                                                 width: .2,
                                               )
                                           )
@@ -564,9 +571,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         children: [
                                           SubText(
                                             text: 'Privacy Settings',
+                                            color: Theme.of(context).primaryColor,
                                             fontWeight: FontWeight.w400,
                                           ),
-                                          Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                          Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                         ],
                                       ),
                                     ),
@@ -581,7 +589,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               padding: EdgeInsets.only(left: 15,),
                               child: Row(
                                 children: [
-                                  Icon(Iconsax.notification,color: AppColor.black,),
+                                  Icon(Iconsax.notification,color: Theme.of(context).primaryColor,),
                                   SizedBox(width: 15..w),
                                   Expanded(
                                     child: Container(
@@ -590,7 +598,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           color: Colors.transparent,
                                           border: Border(
                                               bottom: BorderSide(
-                                                color: AppColor.black.withOpacity(.25),
+                                                color: Theme.of(context).focusColor,
                                                 width: .2,
                                               )
                                           )
@@ -600,9 +608,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         children: [
                                           SubText(
                                             text: 'Reminders',
+                                            color: Theme.of(context).primaryColor,
                                             fontWeight: FontWeight.w400,
                                           ),
-                                          Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                          Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                         ],
                                       ),
                                     ),
@@ -615,7 +624,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             padding: EdgeInsets.only(left: 15,),
                             child: Row(
                               children: [
-                                Icon(Iconsax.message_question,color: AppColor.black,),
+                                Icon(Iconsax.message_question,color: Theme.of(context).primaryColor,),
                                 SizedBox(width: 15..w),
                                 Expanded(
                                   child: Container(
@@ -624,7 +633,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         color: Colors.transparent,
                                         border: Border(
                                             bottom: BorderSide(
-                                              color: AppColor.black.withOpacity(.25),
+                                              color: Theme.of(context).focusColor,
                                               width: .2,
                                             )
                                         )
@@ -634,9 +643,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       children: [
                                         SubText(
                                           text: 'Help',
+                                          color: Theme.of(context).primaryColor,
                                           fontWeight: FontWeight.w400,
                                         ),
-                                        Icon(Icons.keyboard_arrow_right,color: AppColor.black.withOpacity(.25),)
+                                        Icon(Icons.keyboard_arrow_right,color: Theme.of(context).focusColor,)
                                       ],
                                     ),
                                   ),
@@ -648,7 +658,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             padding: EdgeInsets.only(left: 15,),
                             child: Row(
                               children: [
-                                Icon(Iconsax.moon,color: AppColor.black,),
+                                Icon(Iconsax.moon,color: Theme.of(context).primaryColor,),
                                 SizedBox(width: 15..w),
                                 Expanded(
                                   child: Container(
@@ -657,7 +667,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         color: Colors.transparent,
                                         border: Border(
                                             bottom: BorderSide(
-                                              color: AppColor.black.withOpacity(.25),
+                                              color: Theme.of(context).focusColor,
                                               width: .2,
                                             )
                                         )
@@ -667,6 +677,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       children: [
                                         SubText(
                                           text: 'Dark Mode',
+                                          color: Theme.of(context).primaryColor,
                                           fontWeight: FontWeight.w400,
                                         ),
                                         GestureDetector(
@@ -717,7 +728,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.symmetric(horizontal: 20,vertical:20),
                       decoration: BoxDecoration(
-                        color: AppColor.white,
+                        border: Border.all(
+                          color: Colors.white,
+                        ),
+                        color: Theme.of(context).hintColor,
                         borderRadius: BorderRadius.circular(10..r),
                       ),
                       child: Column(
@@ -728,7 +742,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               child: Image.asset('${imagePath}protect.png')),
                           SubText(
                             text: 'Your data is protected',
-                            color: AppColor.black,
+                            color: Theme.of(context).primaryColor,
                             fontSize: 20..sp,
                             fontWeight: FontWeight.w500,
                           ),
@@ -738,7 +752,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             'Your privacy is our top priority.We\'ll never sell your data and you can delete it at anytime',
                             style: TextStyle(
                               fontWeight: FontWeight.w400,
-                              color: AppColor.black.withOpacity(.4),
+                              color: Theme.of(context).cardColor,
                               fontSize: 14..sp,
                             ),
                           ),
@@ -747,14 +761,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             width: MediaQuery.of(context).size.width*.3,
                             height: 35..h,
                             decoration: BoxDecoration(
-                              color: AppColor.black.withOpacity(.1),
+                                color: Theme.of(context).shadowColor,
                               borderRadius: BorderRadius.circular(50),
                             ),
                             child: Center(
                               child: Text(
                                 'Learn more',
                                 style: TextStyle(
-                                  color: AppColor.black,
+                                  color: Theme.of(context).primaryColor,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 14..sp,
                                 ),

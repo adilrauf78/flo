@@ -50,7 +50,11 @@ class _Questions3State extends State<Questions3> {
                           ),
                           SizedBox(height: 120..h),
                           GestureDetector(
-                            onTap: () => navigateToNextScreen(context, Question4()),
+                            onTap: () {
+                              Future.delayed(Duration(seconds: 1), () {
+                                navigateToNextScreen(context, Question4());
+                              });
+                            },
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.all(15),
@@ -67,7 +71,11 @@ class _Questions3State extends State<Questions3> {
                           ),
                           SizedBox(height: 20..h,),
                           GestureDetector(
-                            onTap: () => navigateToNextScreen(context, Question4()),
+                            onTap: () {
+                              Future.delayed(Duration(seconds: 1), () {
+                                navigateToNextScreen(context, Question4());
+                              });
+                            },
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.all(15),
@@ -84,7 +92,11 @@ class _Questions3State extends State<Questions3> {
                           ),
                           SizedBox(height: 20..h,),
                           GestureDetector(
-                            onTap: () => navigateToNextScreen(context, Question4()),
+                            onTap: () {
+                              Future.delayed(Duration(seconds: 1), () {
+                                navigateToNextScreen(context, Question4());
+                              });
+                            },
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.all(15),

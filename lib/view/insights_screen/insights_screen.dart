@@ -97,10 +97,10 @@ class _InsightsScreenState extends State<InsightsScreen> {
                           filled: true,
                           hintText: 'Search',
                         hintStyle: TextStyle(
-                          color: AppColor.black,
+                          color: Theme.of(context).primaryColor,
                         ),
                         fillColor: Theme.of(context).shadowColor,
-                        prefixIcon: Icon(Iconsax.search_normal, color: AppColor.black),
+                        prefixIcon: Icon(Iconsax.search_normal,color: Theme.of(context).primaryColor,),
                       ),
                     ),
                   ),
@@ -124,7 +124,6 @@ class _InsightsScreenState extends State<InsightsScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          width:70..w,
                           padding: EdgeInsets.all(2),
                           decoration: BoxDecoration(
                               color: Colors.transparent
@@ -135,7 +134,7 @@ class _InsightsScreenState extends State<InsightsScreen> {
                                 width: 45..w,
                                 height: 45..h,
                                 decoration: BoxDecoration(
-                                  color: Theme.of(context).shadowColor,
+                                  color: AppColor.white,
                                   borderRadius: BorderRadius.circular(10),
                                   image: DecorationImage(
                                     image: AssetImage('${imagePath}growth.png'),
@@ -145,14 +144,13 @@ class _InsightsScreenState extends State<InsightsScreen> {
                               ),
                               SizedBox(height:5),
                               Text14(
-                                text: 'Baby\'s growth',
+                                text: 'Baby\'s \ngrowth',
                                 color: Theme.of(context).primaryColor,
                               )
                             ],
                           ),
                         ),
                         Container(
-                          width:70..w,
                           padding: EdgeInsets.all(2),
                           decoration: BoxDecoration(
                               color: Colors.transparent
@@ -163,7 +161,7 @@ class _InsightsScreenState extends State<InsightsScreen> {
                                 width: 45..w,
                                 height: 45..h,
                                 decoration: BoxDecoration(
-                                  color: Theme.of(context).shadowColor,
+                                  color: AppColor.white,
                                   borderRadius: BorderRadius.circular(10),
                                   image: DecorationImage(
                                     image: AssetImage('${imagePath}body.png'),
@@ -174,13 +172,12 @@ class _InsightsScreenState extends State<InsightsScreen> {
                               SizedBox(height:5),
                               Text14(
                                 color: Theme.of(context).primaryColor,
-                                text: 'Body Changes',
+                                text: 'Body \nChanges',
                               )
                             ],
                           ),
                         ),
                         Container(
-                          width:70..w,
                           padding: EdgeInsets.all(2),
                           decoration: BoxDecoration(
                               color: Colors.transparent
@@ -191,7 +188,7 @@ class _InsightsScreenState extends State<InsightsScreen> {
                                 width: 45..w,
                                 height: 45..h,
                                 decoration: BoxDecoration(
-                                  color: Theme.of(context).shadowColor,
+                                  color: AppColor.white,
                                   borderRadius: BorderRadius.circular(10),
                                   image: DecorationImage(
                                     image: AssetImage('${imagePath}check.png'),
@@ -201,7 +198,7 @@ class _InsightsScreenState extends State<InsightsScreen> {
                               ),
                               SizedBox(height:5),
                               Text14(
-                                text: 'Pregnancy Checkups',
+                                text: 'Pregnancy \nCheckups',
                                 color: Theme.of(context).primaryColor,
                               )
                             ],

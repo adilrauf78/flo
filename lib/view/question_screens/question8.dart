@@ -260,7 +260,11 @@ class _Question8State extends State<Question8> {
                     color: Theme.of(context).scaffoldBackgroundColor,
                   ),
                   child: GestureDetector(
-                    onTap: () => navigateToNextScreen(context, Question9()),
+                    onTap: () {
+                      Future.delayed(Duration(seconds: 1), () {
+                        navigateToNextScreen(context, Question9());
+                      });
+                    },
                     child: Center(
                       child: QuestionButton(
                         text: 'Next',

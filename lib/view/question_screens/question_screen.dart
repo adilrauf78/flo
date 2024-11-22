@@ -123,7 +123,13 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
                 child: GestureDetector(
-                  onTap: currentIndex != 0 ? _onNext : null,
+                  onTap: currentIndex != 0
+                      ? () {
+                    Future.delayed(Duration(seconds: 1), () {
+                      _onNext();
+                    });
+                  }
+                      : null,
                   child: Center(
                     child: QuestionButton(
                       text: 'Next',

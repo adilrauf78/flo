@@ -23,12 +23,11 @@ class _CustomCalendarScreenState extends State<CustomCalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Stack(
         children: [
           Column(
             children: [
-              // Header with Toggle Switch
               Padding(
                 padding: EdgeInsets.only(left: 15, right: 15, top: 45, bottom: 10),
                 child: Row(
@@ -38,19 +37,19 @@ class _CustomCalendarScreenState extends State<CustomCalendarScreen> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Icon(Icons.close, size: 24, color: Colors.black),
+                      child: Icon(Icons.close, size: 24, color: Theme.of(context).primaryColor,),
                     ),
                     Text24(
                       text: 'Calendar',
                       fontWeight: FontWeight.w700,
-                      color: AppColor.black,
+                      color: Theme.of(context).primaryColor,
                     ),
                     Container(width: 25,)
                   ],
                 ),
               ),
               Divider(
-                color: Colors.black.withOpacity(.2),
+                color: Theme.of(context).shadowColor,
               ),
               // Calendar View
               Expanded(
@@ -111,10 +110,9 @@ class _CustomCalendarScreenState extends State<CustomCalendarScreen> {
                 Stack(
                   alignment: Alignment.center,
                   children: [
-                    // Circle Background for the Date
                     Container(
-                      width: 25,
-                      height: 25,
+                      width: 30,
+                      height: 30,
                       decoration: BoxDecoration(
                         color: isSelected
                             ? AppColor.primaryColor
@@ -128,7 +126,7 @@ class _CustomCalendarScreenState extends State<CustomCalendarScreen> {
                     Text(
                       '${date.day}',
                       style: TextStyle(
-                        color: isSelected || isToday ? Colors.white : Colors.black,
+                        color: isSelected || isToday ? Colors.white :  Theme.of(context).primaryColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

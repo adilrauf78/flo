@@ -185,7 +185,7 @@ class _TodayScreenState extends State<TodayScreen>
                                         width: 50,
                                         height: 50,
                                         decoration: BoxDecoration(
-                                          color: isSelected ?  Theme.of(context).hintColor : Colors.transparent,
+                                          color: isSelected ?  AppColor.white : Colors.transparent,
                                           shape: BoxShape.circle,
                                         ),
                                         child: Center(
@@ -293,7 +293,7 @@ class _TodayScreenState extends State<TodayScreen>
                                       color: AppColor.primaryColor,
                                       width: 2
                                   ),
-                                  color: Colors.white,
+                                  color: Theme.of(context).hintColor,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Column(
@@ -345,7 +345,10 @@ class _TodayScreenState extends State<TodayScreen>
                           width: double.infinity,
                           padding: EdgeInsets.symmetric(vertical: 15),
                           decoration: BoxDecoration(
-                            color: AppColor.white,
+                            color: Theme.of(context).hintColor,
+                            border: Border.all(
+                                color: Colors.white,
+                            ),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Column(
@@ -355,6 +358,7 @@ class _TodayScreenState extends State<TodayScreen>
                                 padding: const EdgeInsets.symmetric(horizontal: 15),
                                 child: MainText(
                                   text: 'What to expect at 21 Weeks',
+                                  color: Theme.of(context).primaryColor,
                                 ),
                               ),
                               Divider(
@@ -386,8 +390,11 @@ class _TodayScreenState extends State<TodayScreen>
                                             ),
                                             filled: true,
                                             hintText: 'Search articles,videos',
-                                            fillColor: AppColor.black.withOpacity(.1),
-                                            prefixIcon: Icon(Iconsax.search_normal, color: AppColor.black.withOpacity(0.6))
+                                            hintStyle: TextStyle(
+                                              color: Theme.of(context).primaryColor,
+                                            ),
+                                            fillColor: Theme.of(context).shadowColor,
+                                            prefixIcon: Icon(Iconsax.search_normal, color: Theme.of(context).primaryColor,)
                                         ),
                                       ),
                                     ),
@@ -396,7 +403,6 @@ class _TodayScreenState extends State<TodayScreen>
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
-                                          width:70..w,
                                           padding: EdgeInsets.all(2),
                                           decoration: BoxDecoration(
                                               color: Colors.transparent
@@ -407,6 +413,8 @@ class _TodayScreenState extends State<TodayScreen>
                                                 width: 45..w,
                                                 height: 45..h,
                                                 decoration: BoxDecoration(
+                                                  color: AppColor.white,
+                                                  borderRadius: BorderRadius.circular(10),
                                                   image: DecorationImage(
                                                     image: AssetImage('${imagePath}growth.png'),
                                                     fit: BoxFit.cover,
@@ -415,13 +423,13 @@ class _TodayScreenState extends State<TodayScreen>
                                               ),
                                               SizedBox(height:5),
                                               Text14(
-                                                text: 'Baby\'s growth',
+                                                text: 'Baby\'s \ngrowth',
+                                                color: Theme.of(context).primaryColor,
                                               )
                                             ],
                                           ),
                                         ),
                                         Container(
-                                          width:70..w,
                                           padding: EdgeInsets.all(2),
                                           decoration: BoxDecoration(
                                               color: Colors.transparent
@@ -432,6 +440,8 @@ class _TodayScreenState extends State<TodayScreen>
                                                 width: 45..w,
                                                 height: 45..h,
                                                 decoration: BoxDecoration(
+                                                  color: AppColor.white,
+                                                  borderRadius: BorderRadius.circular(10),
                                                   image: DecorationImage(
                                                     image: AssetImage('${imagePath}body.png'),
                                                     fit: BoxFit.cover,
@@ -440,13 +450,13 @@ class _TodayScreenState extends State<TodayScreen>
                                               ),
                                               SizedBox(height:5),
                                               Text14(
-                                                text: 'Body Changes',
+                                                color: Theme.of(context).primaryColor,
+                                                text: 'Body \nChanges',
                                               )
                                             ],
                                           ),
                                         ),
                                         Container(
-                                          width:70..w,
                                           padding: EdgeInsets.all(2),
                                           decoration: BoxDecoration(
                                               color: Colors.transparent
@@ -457,6 +467,8 @@ class _TodayScreenState extends State<TodayScreen>
                                                 width: 45..w,
                                                 height: 45..h,
                                                 decoration: BoxDecoration(
+                                                  color: AppColor.white,
+                                                  borderRadius: BorderRadius.circular(10),
                                                   image: DecorationImage(
                                                     image: AssetImage('${imagePath}check.png'),
                                                     fit: BoxFit.cover,
@@ -465,7 +477,8 @@ class _TodayScreenState extends State<TodayScreen>
                                               ),
                                               SizedBox(height:5),
                                               Text14(
-                                                text: 'Pregnancy Checkups',
+                                                text: 'Pregnancy \nCheckups',
+                                                color: Theme.of(context).primaryColor,
                                               )
                                             ],
                                           ),
@@ -475,6 +488,7 @@ class _TodayScreenState extends State<TodayScreen>
                                     SizedBox(height: 10..h),
                                     MainText(
                                       text: 'Based on your Current trimester',
+                                      color: Theme.of(context).primaryColor,
                                     ),
                                     SizedBox(height: 10..h),
                                     ListView.builder(
@@ -516,7 +530,7 @@ class _TodayScreenState extends State<TodayScreen>
                                                           maxLines: 2,
                                                           'Handy food hacks for your 2nd trimester',
                                                           style: TextStyle(
-                                                              color: AppColor.black,
+                                                              color: Theme.of(context).primaryColor,
                                                               fontWeight: FontWeight.w500,
                                                               fontSize: 16
                                                           ),
@@ -525,7 +539,7 @@ class _TodayScreenState extends State<TodayScreen>
                                                         Text(
                                                           'The second trimester brings the need for a slight',
                                                           style: TextStyle(
-                                                            color: AppColor.black.withOpacity(.5),
+                                                            color: Theme.of(context).cardColor,
                                                             fontSize: 14,
                                                             fontWeight: FontWeight.w500,
                                                           ),
@@ -551,7 +565,7 @@ class _TodayScreenState extends State<TodayScreen>
                                           width: double.infinity,
                                             height: 45..h,
                                             decoration: BoxDecoration(
-                                              color: AppColor.black.withOpacity(.1),
+                                                color: Theme.of(context).shadowColor,
                                               borderRadius: BorderRadius.circular(50..r)
                                             ),
                                             child: Center(
@@ -560,7 +574,7 @@ class _TodayScreenState extends State<TodayScreen>
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 16..sp,
-                                                  color: AppColor.black,
+                                                  color: Theme.of(context).primaryColor,
                                                 ),
                                               ),
                                             ),

@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
           focusColor: AppColor.black.withOpacity(.25),
           cardColor: AppColor.black.withOpacity(.5),
           dividerColor: AppColor.black.withOpacity(.7),
-
         ),
         dark: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: AppColors.black,
