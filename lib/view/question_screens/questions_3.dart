@@ -51,6 +51,9 @@ class _Questions3State extends State<Questions3> {
                           SizedBox(height: 120..h),
                           GestureDetector(
                             onTap: () {
+                              setState(() {
+                                currentIndex = 1;
+                              });
                               Future.delayed(Duration(seconds: 1), () {
                                 navigateToNextScreen(context, Question4());
                               });
@@ -59,19 +62,22 @@ class _Questions3State extends State<Questions3> {
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.all(15),
                               decoration: BoxDecoration(
-                                color: AppColor.primaryColor,
+                                  color: currentIndex == 1 ?AppColor.primaryColor :  AppColor.backgroundColor,
                                 borderRadius: BorderRadius.circular(10..r),
                               ),
                               child: SubText(
                                 fontSize: 18,
                                 text: 'No, but I want to be',
-                                color: AppColor.white,
+                                color: currentIndex == 1 ?AppColor.white :  AppColor.black,
                               ),
                             ),
                           ),
                           SizedBox(height: 20..h,),
                           GestureDetector(
                             onTap: () {
+                              setState(() {
+                                currentIndex = 2;
+                              });
                               Future.delayed(Duration(seconds: 1), () {
                                 navigateToNextScreen(context, Question4());
                               });
@@ -80,19 +86,22 @@ class _Questions3State extends State<Questions3> {
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.all(15),
                               decoration: BoxDecoration(
-                                color: AppColor.primaryColor,
+                                  color: currentIndex == 2 ?AppColor.primaryColor :  AppColor.backgroundColor,
                                 borderRadius: BorderRadius.circular(10..r),
                               ),
                               child: SubText(
                                 fontSize: 18,
                                 text: 'No, I\m here to understand my body',
-                                color: AppColor.white,
+                                color: currentIndex == 2 ?AppColor.white :  AppColor.black,
                               ),
                             ),
                           ),
                           SizedBox(height: 20..h,),
                           GestureDetector(
                             onTap: () {
+                              setState(() {
+                                currentIndex = 3;
+                              });
                               Future.delayed(Duration(seconds: 1), () {
                                 navigateToNextScreen(context, Question4());
                               });
@@ -101,13 +110,13 @@ class _Questions3State extends State<Questions3> {
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.all(15),
                               decoration: BoxDecoration(
-                                color: AppColor.primaryColor,
+                                  color: currentIndex == 3 ?AppColor.primaryColor :  AppColor.backgroundColor,
                                 borderRadius: BorderRadius.circular(10..r),
                               ),
                               child: SubText(
                                 fontSize: 18,
                                 text: 'Yes, I am',
-                                color: AppColor.white,
+                                color: currentIndex == 3 ?AppColor.white :  AppColor.black,
                               ),
                             ),
                           ),
