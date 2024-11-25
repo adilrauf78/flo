@@ -15,13 +15,44 @@ class _CycleOvulationState extends State<CycleOvulation> {
   bool chance = false;
   bool displayCycle = false;
   String selectedCycleLength = '21';
-  final List<String> cyclelength = [
+  String selectedValuePeriod = '1';
+
+  final List<String> cycleLength = [
     for (int i = 21; i <= 50; i += 1) i.toString(),
   ];
-  String selectedValuePeriod = '1';
-  final List<String> periodlength = [
-    for (int i = 1; i <= 12; i += 1) i.toString(),
+
+  final List<String> periodLength = [
+    for (int i = 1; i <= 40; i += 1) i.toString(),
   ];
+
+  void validateSelection(BuildContext context) {
+    int cycle = int.parse(selectedCycleLength);
+    int period = int.parse(selectedValuePeriod);
+    int minimumPeriod = (cycle / 2).ceil();
+
+    if (period < minimumPeriod) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text("Cycle & Ovulation"),
+            content: Text(
+              "For a cycle length of $cycle days, the period length must be at least $minimumPeriod days.",
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text("OK"),
+              ),
+            ],
+          );
+        },
+      );
+    }
+  }
+
   String selectedValuePhase = '8';
   final List<String> phase = [
     for (int i = 8; i <= 17; i += 1) i.toString(),
@@ -89,11 +120,14 @@ class _CycleOvulationState extends State<CycleOvulation> {
                                   dropdownColor: Theme.of(context).hintColor,
                                   menuWidth: 90,
                                   onChanged: (String? newValue) {
-                                    setState(() {
-                                      selectedCycleLength = newValue!;
-                                    });
+                                    if (newValue != null) {
+                                      setState(() {
+                                        selectedCycleLength = newValue;
+                                      });
+                                      validateSelection(context);
+                                    }
                                   },
-                                  items: cyclelength.map<DropdownMenuItem<String>>((String value) {
+                                  items: cycleLength.map<DropdownMenuItem<String>>((String value) {
                                     return DropdownMenuItem<String>(
                                       value: value,
                                       child: Row(
@@ -104,7 +138,7 @@ class _CycleOvulationState extends State<CycleOvulation> {
                                     );
                                   }).toList(),
                                   selectedItemBuilder: (BuildContext context) {
-                                    return cyclelength.map((String value) {
+                                    return cycleLength.map((String value) {
                                       return Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
@@ -144,11 +178,14 @@ class _CycleOvulationState extends State<CycleOvulation> {
                                   dropdownColor: Theme.of(context).hintColor,
                                   menuWidth: 90,
                                   onChanged: (String? newValue) {
-                                    setState(() {
-                                      selectedValuePeriod = newValue!;
-                                    });
+                                    if (newValue != null) {
+                                      setState(() {
+                                        selectedValuePeriod = newValue;
+                                      });
+                                      validateSelection(context);
+                                    }
                                   },
-                                  items: periodlength.map<DropdownMenuItem<String>>((String value) {
+                                  items: periodLength.map<DropdownMenuItem<String>>((String value) {
                                     return DropdownMenuItem<String>(
                                       value: value,
                                       child: Row(
@@ -159,7 +196,7 @@ class _CycleOvulationState extends State<CycleOvulation> {
                                     );
                                   }).toList(),
                                   selectedItemBuilder: (BuildContext context) {
-                                    return periodlength.map((String value) {
+                                    return periodLength.map((String value) {
                                       return Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
